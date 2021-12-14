@@ -1,11 +1,15 @@
-This is a Demo project.
+Home Entity Access REST API 
 =======
 ## Property Store/Retrieve business logic
 
-This project contains lays out the interfaces/classes needed for REST API to store/retrieve Home Entity information.
 
+This package defines REST Apis for store/retrieve Home Entity data  and provides skeleton for implementing business logic. 
 
-
-### Testing
-
-- This package is setup with junit5, but no tests have been implemented yet
+### Assumptions for the use cases covered:
+- Read is more frequent than write.
+- In future - need ability to query data.
+- 
+### Out of scope:
+- Spring Wiring. The project is setup with Spring Boot, but configuration is not setup yet.
+- Implementation of Data Access layer
+- Testing. While package has setup for junit5, I didn't have time to implement any unit tests.  

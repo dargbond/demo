@@ -49,8 +49,8 @@ public class HomeEntityService {
         //TODO: this method can throw exceptions. Propagate them to controller and handle them there.
         homeDataAccess.storeProperty(toBeStored);
 
-        //TODO: this should be a safe operation. Likely we don't need to fail the entire request if auditing failed.
-        // The implementation should log warn/emit relevant metrics, but allow request to go through
+        //TODO: depending on the use case, this likely should be allowed to fail without failing the call
+        // The implementation should log a warning and emit relevant metrics, but allow request to go through
         auditDataAccess.storeUpdate(toBeStored, user);
 
         return normalizedAddress;
